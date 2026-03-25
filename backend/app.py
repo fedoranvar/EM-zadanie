@@ -14,7 +14,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    host = "localhost"
+    host = "0.0.0.0"
     port = 8000
     server = HTTPServer((host, port), Handler)
     print(f"Сервер запущен на http://{host}:{port}/")
