@@ -4,7 +4,7 @@ networks:
 
 services:
   backend:
-    container_name: ez_backend
+    container_name: ${BACKEND_CONTAINER_NAME:-backend}
     build:
       dockerfile: ./Dockerfile
       context: backend
@@ -19,7 +19,7 @@ services:
 
   nginx:
     image: nginx:stable-alpine3.23-slim
-    container_name: ez_nginx
+    container_name: ${NGINX_CONTAINER_NAME:-nginx}
     ports:
       - 80:80
     volumes:
